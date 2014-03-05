@@ -2,10 +2,10 @@
 -compile(export_all).
 -include_lib("n2o/include/wf.hrl").
 
-main() -> 
+main() ->
     Title = "Vision",
     Body = body(),
-    [ #dtl{file = "index", bindings=[{title,Title},{body,Body}]} ].
+    [ #dtl{file = "index", ext="html", bind_script=true, bindings=[{title,Title},{body,Body}]} ].
 
 body() -> 
     [].

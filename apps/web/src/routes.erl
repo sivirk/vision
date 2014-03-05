@@ -10,7 +10,7 @@ init(State, Ctx) ->
     Module = route_prefix(Path),
     {ok, State, Ctx#context{path=Path,module=Module}}.
 
-route_prefix(<<"/ws/",P/binary>>) -> route(P);
+route_prefix(<<"/websocket/",P/binary>>) -> route(P);
 route_prefix(<<"/",P/binary>>) -> route(P);
 route_prefix(P) -> route(P).
 
