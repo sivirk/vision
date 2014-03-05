@@ -11,6 +11,7 @@ N2O          := deps/n2o/priv/static
 FILES        := media/n2o
 BOOTSTRAP    := media/bootstrap
 FONTAWESOME  := media/font-awesome
+WEB := media/web
 
 default: compile static-link
 static-link:
@@ -23,5 +24,6 @@ static-link:
 	ln -sf ../deps/n2o/priv/static/n2o $(FILES)
 	ln -sf ../deps/twitter_btstrp $(BOOTSTRAP)
 	ln -sf ../deps/font_awesome $(FONTAWESOME)
+	ln -sf ../apps/web/priv/static $(WEB)
 
 include otp.mk

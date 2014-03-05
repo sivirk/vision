@@ -12,6 +12,7 @@ media/bootstrap
 media/font-awesome
 media/less
 media/tinymce
+media/web
 
 deps
 bootstrap.min.js
