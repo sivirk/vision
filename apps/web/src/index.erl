@@ -14,3 +14,6 @@ account() ->[].
 header() -> [].
 footer() -> [].
 
+event({counter,C}) -> wf:update(onlinenumber,wf:to_list(C));
+
+event(Event) -> error_logger:info_msg("Unknown Event: ~p", [Event]).

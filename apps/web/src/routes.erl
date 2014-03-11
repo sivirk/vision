@@ -14,15 +14,5 @@ route_prefix(<<"/websocket/",P/binary>>) -> route(P);
 route_prefix(<<"/",P/binary>>) -> route(P);
 route_prefix(P) -> route(P).
 
-% route(<<>>)              -> login;
-% route(<<"index">>)       -> login;
-% route(<<"login">>)       -> login;
-% route(<<"feed">>)        -> feed;
-% route(<<"account">>)     -> account;
-% route(<<"tbl">>)         -> textboxlist;
-% route(<<"products">>)    -> products;
-% route(<<"product">>)     -> product;
-% route(<<"reviews">>)     -> reviews;
-% route(<<"chat">>)        -> chat;
-route(<<"favicon.ico">>) -> static_file;
+route(<<>>)              -> index;
 route(_)                 -> index.

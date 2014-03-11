@@ -31,7 +31,7 @@ dispatch_rules() ->
         [{'_', [
             {"/static/[...]", cowboy_static, [{directory, {priv_dir, ?APP, [<<"static">>]}},
                                                 {mimetypes, {fun mimetypes:path_to_mimes/2, default}}]},
-            {"/ws/[...]", bullet_handler, [{handler, n2o_bullet}]},
+            {"/websocket/[...]", bullet_handler, [{handler, n2o_bullet}]},
             {'_', n2o_cowboy, []}
     ]}]).
 
